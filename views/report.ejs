@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="renderer" content="webkit" />
+    <title>文档</title>
+</head>
+
+<body style="font-family: 'Times New Roman'; font-size: 14px;line-height: 24px;">
+    <h2 style="font-weight: bold;font-size: 18px;">X Plus Z(Suzhou Office)</h2>
+    <div class="mod01">
+        <h3 style="font-weight: bold;font-size: 16px;">Today</h3>
+        <div class="mod02">
+            <h4 style="font-weight: bold;font-size: 16px;">Achieved</h4>
+            <div class="mod03">
+                <p>[Developer]</p>
+                    <ul>
+                        <% doneWitDev.forEach(function (item) { %>
+                            <li>[<%= item.author.name %>]<a href="#"><%= item.title %></a><%= item.content %></li>
+                        <% }) %>
+                </ul>
+            </div>
+            <div class="mod03">
+                <p>[QA]</p>
+                    <ul>
+                    <% doneWithQA.forEach(function (item) { %>
+                            <li>[<%= item.author.name %>]<a href="#"><%= item.title %></a><%= item.content %></li>
+                        <% }) %>
+                </ul>
+            </div>
+        </div>
+        <div class="mod02">
+            <h4 style="font-weight: bold;font-size: 16px;">In progress</h4>
+            <div class="mod03">
+                <ul>
+                    <% inDev.forEach(function (item) { %>
+                            <li>[<%= item.author.name %>]<a href="#"><%= item.title %></a><%= item.content %></li>
+                        <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="mod01">
+        <h3 style="font-weight: bold;">Tomorrow</h3>
+        <div class="mod02">
+            <div class="mod03">
+                <ul>
+                    <% tomorrow.forEach(function (item) { %>
+                            <li>[<%= item.author.name %>]<a href="#"><%= item.title %></a><%= item.content %></li>
+                        <% }) %>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <p>Thanks,<br/>Iris</p>
+    
+</body>
+
+</html>
